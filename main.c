@@ -127,7 +127,7 @@ static struct wl_buffer *create_buffer() {
 	wl_shm_pool_destroy(pool);
 
 	// MagickImage is from cat.h
-	memcpy(shm_data, MagickImage, size);
+	memcpy(shm_data, MagickImage, size/2);
 	return buffer;
 }
 

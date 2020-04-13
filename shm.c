@@ -47,7 +47,7 @@ int create_shm_file(off_t size) {
 		return fd;
 	}
 
-	if (ftruncate(fd, size) < 0) {
+	if (ftruncate(fd, size/2) < 0) {
 		close(fd);
 		return -1;
 	}
